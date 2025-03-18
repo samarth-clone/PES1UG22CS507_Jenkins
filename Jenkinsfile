@@ -20,8 +20,11 @@ pipeline {
         }
     }
     post {
-        always {
+        failure {
             echo 'pipeline failed'
+        }
+        success {
+            echo 'pipeline success'
         }
     }
 }
